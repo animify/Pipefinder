@@ -1,0 +1,130 @@
+@import 'jeet'
+@import 'nib'
+
+*
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+placeholder()
+	&::-webkit-input-placeholder
+		{block}
+	&:-moz-placeholder
+		{block}
+	&::-moz-placeholder
+		{block}
+	&:-ms-input-placeholder
+		{block}
+
+html
+	width 100%
+	height 100%
+
+body
+	width 100%
+	height 100%
+	overflow-x: hidden
+	font-family 'Avenir Next LT Pro Regular', 'Helvetica Neue', sans-serif
+	background-color: #fff
+	margin 0
+
+.app
+	center(1050px, pad = 10px)
+	padding-top: 85px
+	text-align: center;
+	h2
+		font-size: 24px
+		color #333
+		margin 0 0 10px 0
+	p
+		color #586370
+		margin 0
+	.field
+		stack()
+		width 100%
+		min-width: 260px
+		max-width: 460px
+		margin-top: 15px
+	.fields
+		cf()
+		margin-top: 13px
+	input, textarea
+		font-family 'Avenir Next LT Pro Regular', 'Helvetica Neue', sans-serif
+		border 2px solid #E1E5ED
+		padding 12px 16px
+		font-size: 14px
+		width 100%
+		outline 0
+		color #434950
+		line-height: 20px
+		transition: border-color 0.2s ease
+		&:focus
+			border-color #5085FA
+		+placeholder()
+			color #929CAA
+	textarea
+		resize vertical
+		min-height: 190px
+		max-height: 600px
+	.output
+		display: none
+		text-align: left;
+		background-color: #F4F6FA
+		padding 12px 54px 12px 12px
+		overflow: hidden;
+		position relative
+		border-radius: 2px
+		a.output-a
+			font-size: 13px
+			color #5085FA
+			width 100%
+			overflow ellipsis
+			display: block;
+			margin 0
+			text-decoration: none
+			letter-spacing: -0.2px
+			&:hover
+				color: darken(#5085FA, 7%)
+
+		span
+			background-color: #5085FA
+			height 100%
+			text-align: center;
+			absolute right top
+			transition: all 0.2s ease
+			cursor: pointer;
+			font-size: 10px
+			color #fff
+			line-height: 40px
+			padding 0 12px
+			&:hover
+				background-color: darken(#5085FA, 7%)
+			i
+				color #fff
+				font-size: 22px
+				line-height: 42px
+	.cta
+		background-color: #5085FA
+		padding 21px 0 18px 0
+		width 100%
+		display: block;
+		color #fff
+		text-align: center;
+		margin 0
+		font-size: 16px
+		line-height: 15px
+		border-radius: 2px
+		transition: all 0.2s ease
+		cursor: pointer;
+		&:hover
+			background-color: darken(#5085FA, 7%)
+	small
+		cf()
+		font-size: 11px
+		margin-top: 11px
+		span(1/1)
+		color: #929CAA
+		transition: all 0.2s ease
+		cursor: pointer;
+		&:hover
+			color: darken(#929CAA, 25%)
